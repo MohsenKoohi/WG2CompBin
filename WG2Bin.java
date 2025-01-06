@@ -302,7 +302,7 @@ public class WG2Bin
 					int pv = 0;
 					for(long v = start_vertex; v < end_vertex; v++)
 					{
-						long degree = graph.outdegree((int)v);
+						long degree = graph.outdegree(v);
 						sum += degree;
 
 						tjc_sum += degree;
