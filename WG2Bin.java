@@ -1,8 +1,6 @@
-// We convert an arc labelled graph in Web Graph format to binary files
-// The first binary file contains offsets with 8 bytes per vertex in little endian order and for |V|+1 vertices
-// The second binary file is the edges file with 4 bytes for neighbour and 4 bytes for label per edge
-
-// https://search.maven.org/search?q=it.unimi.dsi
+// This program convert a graph in Web Graph format to binary files:
+// The first binary file contains offsets with 8 Bytes per vertex in little endian order and for |V|+1 vertices
+// The second binary file is the edges file with `n` Bytes for neighbour, where  `n` = log|V|/8 
 
 import java.io.*;
 import java.nio.*;
