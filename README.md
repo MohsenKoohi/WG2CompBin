@@ -4,7 +4,7 @@ This repository contains a parallel code to convert WebGraph format to binary CS
 For each input three files are created: 
 
 - A `_offsets.bin` file which is the `offsets` array, containing |V|+1 elements, with 8 Bytes per element.
-- A `_edges.bin` file which is the `edges` array, containing |E| elements, with `b` Bytes per element, where `b = [log10(|V|)]`.
+- A `_edges.bin` file which is the `edges` array, containing |E| elements, with `b` Bytes per element, where `b = ceil(log2(|V|)/8)`.
 - A `_props.txt` file which includes `|V|`, `|E|`, `b`.
 
 ### Sample exec
