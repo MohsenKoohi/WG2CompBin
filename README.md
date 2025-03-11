@@ -7,5 +7,8 @@ For each input three files are created:
 - A `_edges.bin` file which is the `edges` array, containing |E| elements, with `b` Bytes per element, where `b = ceil(log2(|V|)/8)`.
 - A `_props.txt` file which includes `|V|`, `|E|`, `b`.
 
+### Execution
+`make WG2Bin args="path/to/graph path/to/bin/folder"`
+
 ### Sample exec
 `make test`
