@@ -1,11 +1,12 @@
-# WebGraph To Binary Conversion
+# WebGraph To CompBin Conversion
 
-This repository contains a parallel code to convert WebGraph format to binary CSX (Compressed Sparse Row/Column).
-For each input three files are created: 
+This repository contains a shared-memory parallel code to convert WebGraph format to CompBin format. 
+CompBin is a compact presnetation base on CSR/CSC formats, skipping allocating space for edges array in a byte-level granularity.
+For an input graph compressed in WebGraph format, three files are created: 
 
-- A `_offsets.bin` file which is the `offsets` array, containing |V|+1 elements, with 8 Bytes per element.
-- A `_edges.bin` file which is the `edges` array, containing |E| elements, with `b` Bytes per element, where `b = ceil(log2(|V|)/8)`.
-- A `_props.txt` file which includes `|V|`, `|E|`, `b`.
+- The `XXX_offsets.bin` file which is the `offsets` array, containing |V|+1 elements, with 8 Bytes per element.
+- The `XXX_edges.bin` file which is the `edges` array, containing |E| elements, with `b` Bytes per element, where `b = ceil(log2(|V|)/8)`.
+- The `XXX_props.txt` file which includes `|V|`, `|E|`, `b`.
 
 ### Execution
 `make WG2Bin args="path/to/graph path/to/bin/folder"`
